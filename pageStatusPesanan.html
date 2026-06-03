@@ -1,22 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Status Pesanan</title>
+
+    <link rel="stylesheet" href="statusPesanan.css">
 </head>
+
 <body>
-    <h3>Nomor Pesanan</h3>
-    <p>#5213475</p>
 
-    <h3>Nomor Meja</h3>
-    <p>05</p>
+<div class="container">
 
-    <p>Pesanan di terima</p>
-    <p>Makanan sedang disiapkan</p>
-    <p>Siap di antar</p>
-    <p>Pesanan Sudah Siap</p>
+    <div class="judul">
+         STATUS PEMESANAN
+    </div>
 
-    <p align="center">SELAMAT MENIKMATI!</p>
+    <div class="label">
+        Nomor Pesanan
+    </div>
+
+    <div class="value">
+        #5213475
+    </div>
+
+    <div class="label">
+        Nomor Meja
+    </div>
+
+    <div class="value">
+        05
+    </div>
+
+    <div class="status-box">
+
+        <div class="timeline">
+
+            <div class="step done">
+                <div class="step-title">
+                    Pesanan di Terima
+                </div>
+
+                <div class="step-desc">
+                    10:13 • telah diterima oleh kitchen
+                </div>
+            </div>
+
+            <div class="step active">
+                <div class="step-title">
+                    Makanan Sedang Disiapkan
+                </div>
+
+                <div class="step-desc">
+                    Chef sedang mempersiapkan makananmu
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-title">
+                    Siap di Antar
+                </div>
+
+                <div class="step-desc">
+                    Menunggu pelayan untuk mengantar
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-title">
+                    Pesanan Sudah Siap
+                </div>
+
+                <div class="step-desc">
+                    Selamat Menikmati!
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <a href="index.html" class="btn-selesai">
+        SELESAI
+    </a>
+
+</div>
+
 </body>
 </html>
