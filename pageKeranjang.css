@@ -1,0 +1,85 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    min-height:100vh;
+    padding:40px 20px;
+}
+
+h2{
+    color:#000000;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+p{
+    margin-bottom:15px;
+    color:#444;
+}
+
+/* tombol pilihan pembayaran */
+button{
+    width:100%;
+    padding:20px;
+    margin-bottom:15px;
+
+    background:#faf5f5;
+    border:2px solid #d9d9d9;
+    border-radius:15px;
+
+    text-align:left;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    border-color:#007a52;
+}
+
+button a{
+    text-decoration:none;
+    color:#222;
+    font-size:22px;
+    font-weight:bold;
+    display:block;
+}
+
+/* tombol lanjutkan */
+.btn-lanjut{
+    display:block;
+    width:100%;
+    margin-top:250px;
+
+    padding:16px;
+    background:#000000;
+
+    color:white;
+    text-decoration:none;
+    text-align:center;
+
+    border-radius:12px;
+    font-size:22px;
+    font-weight:bold;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-lanjut:hover{
+    background:#006244;
+}
+
+/* tombol back */
+.btn-back{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+
+    text-decoration:none;
+    color:#444;
+    font-weight:bold;
+}
