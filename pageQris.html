@@ -1,29 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pembayaran QRIS</title>
+
+    <link rel="stylesheet" href="pageQris.css">
 </head>
 <body>
-    <h3>Pembayaran QRIS</h3>
 
-    <p align="center">Scan QRIS untuk Membayar</p>
-    <p align="center">Total Pembayaran</p>
-    <p align="center">Rp 84.000</p>
+    <h3>PEMBAYARAN QRIS</h3>
 
-
-    <p align="center">Gunakan Aplikasi E-Wallet atau M-Banking</p>
-
-    <p align="center">Sisa Waktu : 09:34</p>
-
-    <p align="center"> 
-        <button>BATALKAN</button>
+    <p class="judul">
+        Scan QRIS untuk Membayar
     </p>
 
-    <p align="center">
-        <button> <a href="pageStatusPesanan.html">Cek Status Pesanan</a></button>
+    <p class="total-text">
+        Total Pembayaran
     </p>
+
+    <p class="total">
+        Rp 94.000
+    </p>
+
+    <div class="qr-box">
+        <img src="qrcode.png" alt="QRIS">
+    </div>
+
+    <p class="info">
+        Gunakan Aplikasi E-wallet atau M-banking
+    </p>
+
+    <p class="timer">
+        Sisa Waktu : 09:34
+    </p>
+
+    <a class="btn-batal">
+        BATALKAN
+    </a>
+
+    <a href="pageStatusPesanan.html" class="btn-status">
+        CEK STATUS PESANAN
+    </a>
 
 </body>
 </html>
