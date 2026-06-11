@@ -83,3 +83,150 @@ button a{
     color:#444;
     font-weight:bold;
 }
+
+/* =========================
+   ANIMASI MASUK
+========================= */
+
+h2{
+    animation:fadeDown 1s ease;
+}
+
+button:nth-of-type(1){
+    opacity:0;
+    animation:fadeUp 0.8s ease forwards;
+    animation-delay:0.3s;
+}
+
+button:nth-of-type(2){
+    opacity:0;
+    animation:fadeUp 0.8s ease forwards;
+    animation-delay:0.6s;
+}
+
+.btn-lanjut{
+    opacity:0;
+    animation:fadeUp 0.8s ease forwards;
+    animation-delay:0.9s;
+}
+
+.btn-back{
+    opacity:0;
+    animation:fadeUp 0.8s ease forwards;
+    animation-delay:1.2s;
+}
+
+/* =========================
+   KEYFRAMES
+========================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   HOVER CARD PEMBAYARAN
+========================= */
+
+button{
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+button:hover{
+    transform:translateY(-5px);
+    border-color:#007a52;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   HOVER TOMBOL LANJUT
+========================= */
+
+.btn-lanjut{
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.btn-lanjut:hover{
+    background:#0d8a5f;
+    transform:scale(1.03);
+}
+
+/* =========================
+   HOVER BACK
+========================= */
+
+.btn-back{
+    transition:color 0.3s ease;
+}
+
+.btn-back:hover{
+    color:#0d8a5f;
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media screen and (max-width:768px){
+
+    h2{
+        font-size:24px;
+    }
+
+    button a{
+        font-size:20px;
+    }
+}
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media screen and (max-width:480px){
+
+    body{
+        padding:25px 15px;
+    }
+
+    h2{
+        font-size:22px;
+    }
+
+    button{
+        padding:16px;
+    }
+
+    button a{
+        font-size:18px;
+    }
+
+    .btn-lanjut{
+        margin-top:120px;
+        font-size:18px;
+    }
+}
