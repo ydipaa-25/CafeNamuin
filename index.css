@@ -1,3 +1,9 @@
+:root{
+    --primary:#00d84a;
+    --primary-hover:#00b83f;
+}
+
+
 *{
     margin:0;
     padding:0;
@@ -88,12 +94,28 @@ input{
 .btn{
     display:inline-block;
     padding:12px 25px;
-    background:#00d84a;
+
+    background:var(--primary);
     color:white;
+
     text-decoration:none;
+
     border-radius:20px;
     font-size:20px;
     font-weight:bold;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn:hover{
+    background:var(--primary-hover);
+
+    transform:translateY(-4px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
 }
 
 button a{
@@ -104,4 +126,111 @@ button a{
 .meja{
     margin-top:50px;
     font-size:24px;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* NAMUIN CAFE */
+.container p:nth-child(1){
+    opacity:0;
+    animation:fadeUp 1s ease forwards;
+}
+
+/* Namuin Cafe + Jam Operasional */
+.container p:nth-child(2),
+.container p:nth-child(3){
+    opacity:0;
+    animation:fadeUp 1s ease forwards;
+    animation-delay:0.5s;
+}
+
+/* SELAMAT DATANG */
+.container p:nth-child(6){
+    opacity:0;
+    animation:fadeUp 1s ease forwards;
+    animation-delay:1s;
+}
+
+/* Deskripsi */
+.container p:nth-child(7){
+    opacity:0;
+    animation:fadeUp 1s ease forwards;
+    animation-delay:1.5s;
+}
+
+/* Tombol */
+.btn{
+    opacity:0;
+    animation:fadeUp 1s ease forwards;
+    animation-delay:2s;
+}
+
+@media screen and (max-width:768px){
+
+    .container{
+        width:90%;
+    }
+
+    .logo{
+        font-size:32px;
+    }
+
+    .judul{
+        font-size:35px;
+    }
+
+    input{
+        font-size:14px;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .meja{
+        font-size:18px;
+    }
+}
+
+@media screen and (max-width:480px){
+
+    .container{
+        width:95%;
+    }
+
+    .logo{
+        font-size:28px;
+    }
+
+    .judul{
+        font-size:28px;
+    }
+
+    .btn{
+        font-size:16px;
+        padding:12px;
+    }
+}
+
+.menu-card{
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.menu-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,0.2);
 }
