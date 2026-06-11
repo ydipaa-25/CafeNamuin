@@ -124,3 +124,157 @@ button a{
 
     line-height:1;
 }
+
+/* =========================
+   ANIMASI MASUK
+========================= */
+
+h1{
+    animation:fadeDown 1s ease;
+}
+
+.Menu-Item{
+    opacity:0;
+    animation:fadeUp 0.8s ease forwards;
+}
+
+.Menu-Item:nth-child(2){
+    animation-delay:0.2s;
+}
+
+.Menu-Item:nth-child(3){
+    animation-delay:0.4s;
+}
+
+.Menu-Item:nth-child(4){
+    animation-delay:0.6s;
+}
+
+.Menu-Item:nth-child(5){
+    animation-delay:0.8s;
+}
+
+/* =========================
+   KEYFRAMES
+========================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   HOVER CARD MENU
+========================= */
+
+.Menu-Item{
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.Menu-Item:hover{
+    transform:translateY(-5px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   HOVER BUTTON
+========================= */
+
+button{
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+button:hover{
+    background:#0d8a5f;
+    transform:scale(1.03);
+}
+
+.qty button:hover{
+    background:#0d8a5f;
+    transform:scale(1.1);
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media screen and (max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    .Menu-Item img{
+        width:80px;
+        height:80px;
+    }
+
+    .Menu-Info h3{
+        font-size:18px;
+    }
+
+    .Menu-Info p{
+        font-size:14px;
+    }
+}
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media screen and (max-width:480px){
+
+    body{
+        padding:10px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    .Menu-Item{
+        gap:10px;
+    }
+
+    .Menu-Item img{
+        width:70px;
+        height:70px;
+    }
+
+    .Menu-Info h3{
+        font-size:16px;
+    }
+
+    .Menu-Info p{
+        font-size:12px;
+    }
+
+    .qty button{
+        width:25px;
+        height:25px;
+    }
+}
