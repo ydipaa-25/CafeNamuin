@@ -101,3 +101,186 @@ h3{
 .btn-status:hover{
     background:#000000;
 }
+
+/* =========================
+   ANIMASI MASUK
+========================= */
+
+h3{
+    animation:fadeDown 1s ease;
+}
+
+.judul{
+    opacity:0;
+    animation:fadeUp 0.8s ease forwards;
+    animation-delay:0.2s;
+}
+
+.total-text{
+    opacity:0;
+    animation:fadeUp 0.8s ease forwards;
+    animation-delay:0.4s;
+}
+
+.total{
+    opacity:0;
+    animation:fadeUp 0.8s ease forwards;
+    animation-delay:0.6s;
+}
+
+.qr-box{
+    opacity:0;
+    animation:fadeUp 0.8s ease forwards;
+    animation-delay:0.8s;
+}
+
+.info{
+    opacity:0;
+    animation:fadeUp 0.8s ease forwards;
+    animation-delay:1s;
+}
+
+.timer{
+    opacity:0;
+    animation:fadeUp 0.8s ease forwards;
+    animation-delay:1.2s;
+}
+
+.btn-batal{
+    opacity:0;
+    animation:fadeUp 0.8s ease forwards;
+    animation-delay:1.4s;
+}
+
+.btn-status{
+    opacity:0;
+    animation:fadeUp 0.8s ease forwards;
+    animation-delay:1.6s;
+}
+
+/* =========================
+   KEYFRAMES
+========================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   HOVER QR BOX
+========================= */
+
+.qr-box{
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.qr-box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   HOVER BUTTON
+========================= */
+
+.btn-batal,
+.btn-status{
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.btn-batal:hover{
+    background:#b50000;
+    transform:scale(1.03);
+}
+
+.btn-status:hover{
+    background:#0d8a5f;
+    transform:scale(1.03);
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media screen and (max-width:768px){
+
+    .judul{
+        font-size:28px;
+    }
+
+    .total{
+        font-size:32px;
+    }
+}
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media screen and (max-width:480px){
+
+    body{
+        padding:20px 10px;
+    }
+
+    h3{
+        font-size:22px;
+    }
+
+    .judul{
+        font-size:24px;
+    }
+
+    .total{
+        font-size:28px;
+    }
+
+    .qr-box{
+        width:200px;
+        height:200px;
+    }
+
+    .qr-box img{
+        width:150px;
+        height:150px;
+    }
+
+    .info{
+        font-size:16px;
+    }
+
+    .timer{
+        font-size:22px;
+    }
+
+    .btn-batal,
+    .btn-status{
+        width:100%;
+        max-width:260px;
+        font-size:16px;
+    }
+}
