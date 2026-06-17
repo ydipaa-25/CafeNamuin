@@ -2,72 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Non-Coffe</title>
-    <link rel="stylesheet" href="pageNonCoffe.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+    <link rel="stylesheet" href="pageCoffe.css">
 </head>
 <body>
+
     <h1>Non-Coffe</h1>
-    
-    <div class="Menu-Item">
+
+    <!-- Starla -->
+    <div class="menu-item"
+        data-nama="Starla"
+        data-harga="20000"
+        data-gambar="starla.jpg.jpeg">
+
         <img src="starla.jpg.jpeg" alt="Starla">
 
-        <div class="Menu-Info">
+        <div class="menu-info">
             <h3>Starla</h3>
             <p>Strawberry + Fresh Milk</p>
         </div>
 
-        <div class="Footer">
+        <div class="menu-footer">
             <span>Rp 20.000</span>
         </div>
 
         <div class="qty">
-            <button class="minus">-</button>
+            <button type="button" class="minus">-</button>
             <span class="jumlah">0</span>
-            <button class="plus">+</button>
-        </div>
+            <button type="button" class="plus">+</button>
+        </div>  
     </div>
 
-    <div class="Menu-Item">
+    <!-- Chorla -->
+    <div class="menu-item"
+        data-nama="Chorla"
+        data-harga="20000"
+        data-gambar="Chorla.jpg.jpeg">
+
         <img src="chorla.jpg.jpeg" alt="Chorla">
 
-        <div class="Menu-Info">
+        <div class="menu-info">
             <h3>Chorla</h3>
             <p>Chocolate + Fresh Milk</p>
         </div>
 
-        <div class="Footer">
+        <div class="menu-footer">
             <span>Rp 20.000</span>
         </div>
 
         <div class="qty">
-            <button class="minus">-</button>
+            <button type="button" class="minus">-</button>
             <span class="jumlah">0</span>
-            <button class="plus">+</button>
+            <button type="button" class="plus">+</button>
         </div>
     </div>
 
-    <div class="Menu-Item">
-        <img src="matcha in.jpg.jpeg" alt="Matcha In">
+    <!-- Matcha In -->
+    <div class="menu-item"
+        data-nama="Matcha In"
+        data-harga="25000"
+        data-gambar="Matcha In.jpg.jpeg">
 
-        <div class="Menu-Info">
+        <img src="matcha in.jpg.jpeg" alt="matcha In">
+
+        <div class="menu-info">
             <h3>Matcha In</h3>
-            <p>Matcha + Fresh Milk</p>
+            <p>Matcha + Fresh mil</p>
         </div>
 
-        <div class="Footer">
+        <div class="menu-footer">
             <span>Rp 25.000</span>
         </div>
 
         <div class="qty">
-            <button class="minus">-</button>
+            <button type="button" class="minus">-</button>
             <span class="jumlah">0</span>
-            <button class="plus">+</button>
+            <button type="button" class="plus">+</button>
         </div>
     </div>
 
-    <p align="center">
-        <button> <a href="page2.html">back</a></button>
-    </p>
+    <button>
+        <a href="page2.html">Back</a>
+    </button>
+
+    <button id="btnKeranjang">
+        <a href="page3.html">Keranjang</a>
+    </button>
+
+    <script src="pageCoffe.js"></script>
+
 </body>
 </html>
