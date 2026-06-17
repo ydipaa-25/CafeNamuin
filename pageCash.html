@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pembayaran Cash</title>
-
     <link rel="stylesheet" href="pageCash.css">
 </head>
 
@@ -26,8 +25,8 @@
             Total Pembayaran
         </p>
 
-        <p class="total">
-            Rp 84.000
+        <p class="total" id="totalCash">
+            Rp 0
         </p>
 
         <p class="info">
@@ -39,6 +38,24 @@
         </a>
 
     </div>
+
+    <script>
+
+const data = JSON.parse(localStorage.getItem("keranjang")) || [];
+
+let subtotal = 0;
+
+data.forEach(item => {
+    subtotal += (Number(item.harga) || 0) * (Number(item.qty) || 0);
+});
+
+const tax = subtotal * 0.1;
+const total = subtotal + tax;
+
+document.getElementById("totalCash").textContent =
+    "Rp " + total.toLocaleString("id-ID");
+
+</script>
 
 </body>
 </html>
