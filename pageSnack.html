@@ -3,34 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snack</title>
-    <link rel="stylesheet" href="pageSnack.css"
+    <title>Coffee</title>
+    <link rel="stylesheet" href="pageCoffe.css">
 </head>
 <body>
-    <h1>Snack</h1>
-    
-    <div class="Menu-Item">
-        <img src="doping.jpg.jpeg" alt="Doping">
 
-        <div class="Menu-Info">
+    <h1>Snack</h1>
+
+    <!-- doping -->
+    <div class="menu-item"
+        data-nama="Doping"
+        data-harga="15000"
+        data-gambar="doping.jpg.jpeg">
+
+        <img src="doping.jpg.jpeg" alt="doping">
+
+        <div class="menu-info">
             <h3>Doping</h3>
             <p>Donat + Topping</p>
         </div>
 
-        <div class="Footer">
+        <div class="menu-footer">
             <span>Rp 15.000</span>
         </div>
 
         <div class="qty">
-            <button class="minus">-</button>
+            <button type="button" class="minus">-</button>
             <span class="jumlah">0</span>
-            <button class="plus">+</button>
-        </div>
+            <button type="button" class="plus">+</button>
+        </div>  
     </div>
 
-    
-    <p align="center">
-        <button> <a href="page2.html">back</a></button>
-    </p>
+    <button>
+        <a href="page2.html">Back</a>
+    </button>
+
+    <button id="btnKeranjang">
+        <a href="page3.html">Keranjang</a>
+    </button>
+
+    <script src="pageCoffe.js"></script>
+
 </body>
 </html>
