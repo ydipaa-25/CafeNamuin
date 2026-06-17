@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>Pembayaran QRIS</title>
-
     <link rel="stylesheet" href="pageQris.css">
 </head>
 <body>
@@ -17,8 +16,8 @@
         Total Pembayaran
     </p>
 
-    <p class="total">
-        Rp 94.000
+    <p class="total" id="totalbayar">
+        Rp 0
     </p>
 
     <div class="qr-box">
@@ -29,8 +28,8 @@
         Gunakan Aplikasi E-wallet atau M-banking
     </p>
 
-    <p class="timer">
-        Sisa Waktu : 09:34
+    <p class="timer" id="timer">
+        Sisa Waktu : 10.00
     </p>
 
     <a class="btn-batal">
@@ -41,5 +40,55 @@
         CEK STATUS PEMBAYARAN
     </a>
 
+    <script>
+
+// 10 menit
+let waktu = 10 * 60;
+
+const timerElement = document.getElementById("timer");
+
+const countdown = setInterval(() => {
+
+    let menit = Math.floor(waktu / 60);
+    let detik = waktu % 60;
+
+    menit = menit.toString().padStart(2, "0");
+    detik = detik.toString().padStart(2, "0");
+
+    timerElement.textContent =
+        `Sisa Waktu : ${menit}:${detik}`;
+
+    waktu--;
+
+    if (waktu < 0) {
+
+        clearInterval(countdown);
+
+        timerElement.textContent =
+            "Waktu Pembayaran Habis";
+
+        alert("Waktu pembayaran telah habis!");
+
+    }
+
+}, 1000);
+
+</script>
+
+<script>
+const data = JSON.parse(localStorage.getItem("keranjang")) || [];
+
+let subtotal = 0;
+
+data.forEach(item => {
+    subtotal += (Number(item.harga) || 0) * (Number(item.qty) || 0);
+});
+
+const tax = subtotal * 0.1;
+const total = subtotal + tax;
+
+document.getElementById("totalbayar").textContent =
+    "Rp " + total.toLocaleString("id-ID");
+</script>
 </body>
 </html>
