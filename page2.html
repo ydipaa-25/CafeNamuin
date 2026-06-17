@@ -10,24 +10,27 @@
 
 <div class="container">
 
-    <!-- LOGO -->
     <div class="logo-box">
         <img src="logoNamuinItem.jpeg" alt="Logo">
         <h1>NAMUIN CAFE</h1>
     </div>
 
-    <!-- TABLE -->
     <div class="table-info">
         🍴 Table 05 • NAMUIN
     </div>
 
-    <!-- SEARCH -->
-    <input
-        type="search"
-        class="search-box"
-        placeholder="SEARCH MENU">
+    <div class="search-container">
+        <input
+         type="search"
+         class="search-box"
+         placeholder="search menu">
+        
+        <a href="#" id="btnKeranjang" class="cart-btn">
+            🛒
+        </a>
 
-    <!-- KATEGORI -->
+    </div>
+
     <div class="category">
         <a href="pageCoffe.html">Coffee</a>
         <a href="pageNonCoffe.html">Non Coffee</a>
@@ -35,16 +38,19 @@
         <a href="pageFood.html">Food</a>
     </div>
 
-    <!-- MENU 1 -->
-    <div class="menu-item">
-
+    <!-- STARLA -->
+    <div class="menu-item"  
+         data-nama="Starla"
+         data-harga="20000"
+         data-gambar="starla.jpg.jpeg">
+        
         <img src="starla.jpg.jpeg" alt="Starla">
 
         <div class="menu-info">
 
             <h3>STARLA</h3>
 
-            <p>Strawberry + Fresh Mik</p>
+            <p>Strawberry + Fresh Milk</p>
 
             <div class="size">
                 <span>Reguler</span>
@@ -53,20 +59,26 @@
             </div>
 
             <div class="menu-footer">
+
                 <strong>Rp 20.000</strong>
 
                 <div class="qty">
-                    <button>-</button>
-                    <span>2</span>
-                    <button>+</button>
+                    <button class="minus">-</button>
+                    <span class="jumlah">0</span>
+                    <button class="plus">+</button>
                 </div>
+
             </div>
 
         </div>
+
     </div>
 
-    <!-- MENU 2 -->
-    <div class="menu-item">
+    <!-- KADES -->
+    <div class="menu-item"
+         data-nama="Kades"
+         data-harga="15000"
+         data-gambar="kades.jpg.jpeg">
 
         <img src="kades.jpg.jpeg" alt="Kades">
 
@@ -83,20 +95,26 @@
             </div>
 
             <div class="menu-footer">
+
                 <strong>Rp 15.000</strong>
 
                 <div class="qty">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
+                    <button class="minus">-</button>
+                    <span class="jumlah">0</span>
+                    <button class="plus">+</button>
                 </div>
+
             </div>
 
         </div>
+
     </div>
 
-   <!-- MENU 4 -->
-    <div class="menu-item">
+    <!-- BLACKY -->
+    <div class="menu-item"
+         data-nama="Blacky Rice Bowl"
+         data-harga="25.000"
+         data-gambar="blacky rice bowl.jpg.jpeg">
 
         <img src="blacky rice bowl.jpg.jpeg" alt="Blacky Rice Bowl">
 
@@ -104,7 +122,7 @@
 
             <h3>BLACKY RICE BOWL</h3>
 
-            <p>Rice + Slice Beef + Black Papper Sauce</p>
+            <p>Rice + Slice Beef + Black Pepper Sauce</p>
 
             <div class="size">
                 <span>Pedas</span>
@@ -113,21 +131,26 @@
             </div>
 
             <div class="menu-footer">
+
                 <strong>Rp 25.000</strong>
 
                 <div class="qty">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
+                    <button class="minus">-</button>
+                    <span class="jumlah">0</span>
+                    <button class="plus">+</button>
                 </div>
+
             </div>
 
         </div>
+
     </div>
 
-
-    <!-- MENU 4 -->
-    <div class="menu-item">
+    <!-- NASGOR -->
+    <div class="menu-item"
+         data-nama="Nasi Goreng"
+         data-harga="25.000"
+         data-gambar="nasgor.JPG.jpeg">
 
         <img src="nasgor.JPG.jpeg" alt="Nasi Goreng">
 
@@ -144,29 +167,28 @@
             </div>
 
             <div class="menu-footer">
+
                 <strong>Rp 25.000</strong>
 
                 <div class="qty">
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
+                    <button class="minus">-</button>
+                    <span class="jumlah">0</span>
+                    <button class="plus">+</button>
                 </div>
+
             </div>
 
         </div>
+
     </div>
 
 </div>
 
-</body>
+<button>
+    <a href="page1.html">Back</a>
+</button>
 
-    <button> <a href="page3.html">Keranjang</a></button>
-
-</div>
-
-
-
-<button> <a href="page2.html">back</a></button>
+<script src="page2.js"></script>
 
 </body>
 </html>
