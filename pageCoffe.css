@@ -16,7 +16,7 @@ h1{
 }
 
 /* Card Menu */
-.Menu-Item{
+.menu-item{
     display:flex;
     align-items:center;
     gap:15px;
@@ -29,7 +29,7 @@ h1{
     box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
-.Menu-Item img{
+.menu-item img{
     width:90px;
     height:90px;
 
@@ -37,21 +37,21 @@ h1{
     border-radius:12px;
 }
 
-.Menu-Info{
+.menu-info{
     flex:1;
 }
 
-.Menu-Info h3{
+.menu-info h3{
     font-size:20px;
     margin-bottom:5px;
 }
 
-.Menu-Info p{
+.menu-info p{
     color:#666;
     margin-bottom:8px;
 }
 
-.Menu-Info span{
+.menu-info span{
     font-size:18px;
     font-weight:bold;
     color:#000;
@@ -76,7 +76,7 @@ button a{
     font-weight:bold;
 }
 
-.Menu-Footer{
+.menu-footer{
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -228,7 +228,7 @@ button:hover{
         padding:15px;
     }
 
-    .Menu-Item img{
+    .menu-item img{
         width:80px;
         height:80px;
     }
