@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>Status Pesanan</title>
-
     <link rel="stylesheet" href="pageStatusPesanan.css">
 </head>
 
@@ -34,7 +33,7 @@
 
         <div class="timeline">
 
-            <div class="step done">
+            <div class="step done" id="step1">
                 <div class="step-title">
                     Pesanan di Terima
                 </div>
@@ -44,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="step active">
+            <div class="step active" id="step2">
                 <div class="step-title">
                     Makanan Sedang Disiapkan
                 </div>
@@ -54,7 +53,7 @@
                 </div>
             </div>
 
-            <div class="step">
+            <div class="step" id="step3">
                 <div class="step-title">
                     Siap di Antar
                 </div>
@@ -64,7 +63,7 @@
                 </div>
             </div>
 
-            <div class="step">
+            <div class="step" id="step4">
                 <div class="step-title">
                     Pesanan Sudah Siap
                 </div>
@@ -83,6 +82,45 @@
     </a>
 
 </div>
+
+<script>
+
+const step1 = document.getElementById("step1");
+const step2 = document.getElementById("step2");
+const step3 = document.getElementById("step3");
+const step4 = document.getElementById("step4");
+
+// 10 detik
+setTimeout(() => {
+
+    step2.classList.remove("active");
+    step2.classList.add("done");
+
+    step3.classList.add("active");
+
+}, 10000);
+
+// 20 detik
+setTimeout(() => {
+
+    step3.classList.remove("active");
+    step3.classList.add("done");
+
+    step4.classList.add("active");
+
+}, 20000);
+
+// 30 detik
+setTimeout(() => {
+
+    step4.classList.remove("active");
+    step4.classList.add("done");
+
+    alert("Pesanan Anda Sudah Siap!");
+
+}, 30000);
+
+</script>
 
 </body>
 </html>
