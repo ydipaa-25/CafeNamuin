@@ -53,7 +53,10 @@ body::before{
     position:relative;
     z-index:1;
 
-    width:350px;
+    width:100%;
+    max-width:500px
+
+    padding:20px;
     text-align:center;
 }
 
