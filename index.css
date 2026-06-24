@@ -202,15 +202,7 @@ button a{
     animation-delay:1.6s;
 }
 
-#email{
-    opacity:0;
-    animation:fadeUp 1s ease forwards;
-    animation-delay:1.8s;
-}
-
-
-
-@media screen and (max-width:480px){
+@media screen and (max-width:768px){
 
     .container{
         width:95%;
