@@ -1,16 +1,20 @@
 document.getElementById("startBtn").addEventListener("click", function(){
+    
+const params = new URLSearchParams(window.location.search);
 
-    let email = document.getElementById("email").value.trim();
+const nomorMeja = params.get("meja");
 
-    if(email === ""){
-        alert("Email tidak boleh kosong!");
-        return;
-    }
+if(nomorMeja){
 
-    if(!email.includes("@")){
-        alert("Email harus ada @");
-        return;
-    }
+    document.querySelector(".meja").textContent =
+        "Nomor Meja: " + nomorMeja;
+
+    localStorage.setItem(
+        "nomorMeja",
+        nomorMeja
+    );
+
+}
 
     window.location.href = "page2.html";
 });
