@@ -1,66 +1,108 @@
-// Tombol + dan -
-document.addEventListener("click", function (e) {
+document.querySelectorAll(".menu-item").forEach(item => {
 
-    if (e.target.classList.contains("plus")) {
+    const minus = item.querySelector(".minus");
+    const plus = item.querySelector(".plus");
+    const jumlah = item.querySelector(".jumlah");
 
-        const item = e.target.closest(".menu-item");
-        const jumlahEl = item.querySelector(".jumlah");
+    plus.addEventListener("click", () => {
 
-        let jumlah = parseInt(jumlahEl.textContent) || 0;
-        jumlah++;
+        let qty = parseInt(jumlah.textContent);
+        qty++;
 
-        jumlahEl.textContent = jumlah;
-    }
+        jumlah.textContent = qty;
 
-    if (e.target.classList.contains("minus")) {
+        updateKeranjang(item, qty);
 
-        const item = e.target.closest(".menu-item");
-        const jumlahEl = item.querySelector(".jumlah");
+    });
 
-        let jumlah = parseInt(jumlahEl.textContent) || 0;
+    minus.addEventListener("click", () => {
 
-        if (jumlah > 0) {
-            jumlah--;
+        let qty = parseInt(jumlah.textContent);
+
+        if(qty > 0){
+            qty--;
         }
 
-        jumlahEl.textContent = jumlah;
-    }
+        jumlah.textContent = qty;
+
+        updateKeranjang(item, qty);
+
+    });
+
 });
 
+function updateKeranjang(item, qty){
 
-// Simpan ke keranjang
-document.getElementById("btnKeranjang").addEventListener("click", function (e) {
+    let keranjang =
+        JSON.parse(localStorage.getItem("keranjang")) || [];
 
-    e.preventDefault();
+    const nama = item.dataset.nama;
+    const harga = Number(item.dataset.harga);
+    const gambar = item.dataset.gambar;
 
-    let keranjang = [];
+    const index = keranjang.findIndex(
+        produk => produk.nama === nama
+    );
 
-    document.querySelectorAll(".menu-item").forEach(item => {
+    if(qty > 0){
 
-        const namaEl = item.querySelector("h3");
-        const qtyEl = item.querySelector(".jumlah");
-        const imgEl = item.querySelector("img");
+        if(index !== -1){
 
-        const nama = namaEl ? namaEl.textContent.trim() : "";
-        const qty = qtyEl ? parseInt(qtyEl.textContent) || 0 : 0;
-        const harga = parseInt(item.getAttribute("data-harga")) || 0;
-        const gambar = imgEl ? imgEl.src : "";
+            keranjang[index].qty = qty;
 
-        if (qty > 0) {
+        }else{
 
             keranjang.push({
-                nama: nama,
-                harga: harga,
-                qty: qty,
-                gambar: gambar
+                nama,
+                harga,
+                gambar,
+                qty
             });
 
         }
 
-    });
+    }else{
 
-    localStorage.setItem("keranjang", JSON.stringify(keranjang));
+        if(index !== -1){
+            keranjang.splice(index, 1);
+        }
+
+    }
+
+    localStorage.setItem(
+        "keranjang",
+        JSON.stringify(keranjang)
+    );
+}
+
+document.getElementById("btnKeranjang")
+.addEventListener("click", function(e){
+
+    e.preventDefault();
 
     window.location.href = "page3.html";
+
+});
+
+const scrollBtn = document.getElementById("scrollBtn");
+
+// Muncul saat discroll
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 100){
+        scrollBtn.style.display = "block";
+    }else{
+        scrollBtn.style.display = "none";
+    }
+
+});
+
+// Klik = balik ke atas
+scrollBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 });
