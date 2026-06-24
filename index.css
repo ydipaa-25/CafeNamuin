@@ -1,275 +1,265 @@
-{
-    width:100%;
-    min-height:100vh;
-    margin:0;
-    padding:0;
-}
-
-:root{
-    --primary:#00d84a;
-    --primary-hover:#00b83f;
-}
+        :root{
+            --primary:#00d84a;
+            --primary-hover:#00b83f;
+        }
 
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-body{
-
-
-    height:100dvh;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    position:relative;
-    color:rgb(255, 255, 255);
-
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Background gelap */
-body::before{
-    content:"";
-    position:fixed;
-    top:0;
-    left:0;
-
-    width:100vw;
-    height:100vh;
-
-    background:url('bg\ page1.jpeg');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    
-    filter: blur(5px);
-
-    transform: scale(1.1);
-    z-index: -1;
-}
-
-/* Isi halaman */
-.container{
-    position:relative;
-    z-index:1;
-
-    width:100%;
-    max-width:500px
-
-    padding:20px;
-    text-align:center;
-}
-
-.logo{
-    font-size:40px;
-    font-weight:bold;
-    margin-bottom:20px;
-}
-
-.info-cafe{
-    background:rgb(61, 60, 60);
-    color:black;
-
-    padding:15px;
-    border-radius:15px;
-
-    margin-bottom:80px;
-}
-
-.info-cafe h3{
-    margin-bottom:10px;
-}
-
-.judul{
-    font-size:45px;
-    font-weight:bold;
-
-    margin-bottom:50px;
-}
-
-.deskripsi{
-    margin-bottom:50px;
-}
-
-input{
-    width:100%;
-
-    padding:12px;
-    border:none;
-    border-radius:10px;
-
-    margin-bottom:70px;
-}
-
-.btn{
-    display:inline-block;
-    padding:12px 25px;
-
-    background:var(--primary);
-    color:white;
-
-    text-decoration:none;
-
-    border-radius:20px;
-    font-size:20px;
-    font-weight:bold;
-
-    transition:
-        background-color 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.btn:hover{
-    background:var(--primary-hover);
-
-    transform:translateY(-4px);
-
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
-}
-
-button a{
-    color:white;
-    text-decoration:none;
-}
-
-.meja{
-    margin-top:50px;
-    font-size:24px;
-}
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-.container p:nth-child(1){
-    font-size: 40px;
-    font-weight: bold;
-
-    background: linear-gradient(
-        90deg,
-        #ffffff,
-        #ffffff,
-        #ffffff
-    );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-/* NAMUIN CAFE */
-.container p:nth-child(1){
-    opacity:0;
-    animation:fadeUp 1s ease forwards;
-}
-
-/* Namuin Cafe + Jam Operasional */
-.container p:nth-child(2),
-.container p:nth-child(3){
-    opacity:0;
-    animation:fadeUp 1s ease forwards;
-    animation-delay:0.5s;
-}
-
-/* SELAMAT DATANG */
-.container p:nth-child(6){
-    opacity:0;
-    animation:fadeUp 1s ease forwards;
-    animation-delay:1s;
-}
-
-/* Deskripsi */
-.container p:nth-child(7){
-    opacity:0;
-    animation:fadeUp 1s ease forwards;
-    animation-delay:1.5s;
-}
-
-/* Tombol */
-.btn{
-    opacity:0;
-    animation:fadeUp 1s ease forwards;
-    animation-delay:2s;
-}
-
-#nama{
-    opacity:0;
-    animation:fadeUp 1s ease forwards;
-    animation-delay:1.6s;
-}
+        body{
 
 
-@media screen and (max-width:768px){
+            height:100dvh;
 
-    .container{
-        width:90%;
-    }
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
 
-    .logo{
-        font-size:32px;
-    }
+            position:relative;
+            color:rgb(255, 255, 255);
 
-    .judul{
-        font-size:35px;
-    }
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
 
-    input{
-        font-size:14px;
-    }
+        /* Background gelap */
+        body::before{
+            content:"";
+            position:fixed;
+            top:0;
+            left:0;
 
-    .btn{
-        width:100%;
-    }
+            width:100vw;
+            height:100vh;
 
-    .meja{
-        font-size:18px;
-    }
-}
+            background:url('bg\ page1.jpeg');
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            
+            filter: blur(5px);
 
-@media screen and (max-width:768px){
+            transform: scale(1.1);
+            z-index: -1;
+        }
 
-    .container{
-        width:95%;
-    }
+        /* Isi halaman */
+        .container{
+            position:relative;
+            z-index:1;
 
-    .logo{
-        font-size:28px;
-    }
+            width:350px;
+            text-align:center;
+        }
 
-    .judul{
-        font-size:28px;
-    }
+        .logo{
+            font-size:40px;
+            font-weight:bold;
+            margin-bottom:20px;
+        }
 
-    .btn{
-        font-size:16px;
-        padding:12px;
-    }
-}
+        .info-cafe{
+            background:rgb(61, 60, 60);
+            color:black;
 
-.menu-card{
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
+            padding:15px;
+            border-radius:15px;
 
-.menu-card:hover{
-    transform:translateY(-8px);
+            margin-bottom:80px;
+        }
 
-    box-shadow:
-    0 10px 20px rgba(0,0,0,0.2);
-}
+        .info-cafe h3{
+            margin-bottom:10px;
+        }
+
+        .judul{
+            font-size:45px;
+            font-weight:bold;
+
+            margin-bottom:50px;
+        }
+
+        .deskripsi{
+            margin-bottom:50px;
+        }
+
+        input{
+            width:100%;
+
+            padding:12px;
+            border:none;
+            border-radius:10px;
+
+            margin-bottom:70px;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:12px 25px;
+
+            background:var(--primary);
+            color:white;
+
+            text-decoration:none;
+
+            border-radius:20px;
+            font-size:20px;
+            font-weight:bold;
+
+            transition:
+                background-color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .btn:hover{
+            background:var(--primary-hover);
+
+            transform:translateY(-4px);
+
+            box-shadow:0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        button a{
+            color:white;
+            text-decoration:none;
+        }
+
+        .meja{
+            margin-top:50px;
+            font-size:24px;
+        }
+
+        @keyframes fadeUp{
+            from{
+                opacity:0;
+                transform:translateY(30px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        .container p:nth-child(1){
+            font-size: 40px;
+            font-weight: bold;
+
+            background: linear-gradient(
+                90deg,
+                #ffffff,
+                #ffffff,
+                #ffffff
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* NAMUIN CAFE */
+        .container p:nth-child(1){
+            opacity:0;
+            animation:fadeUp 1s ease forwards;
+        }
+
+        /* Namuin Cafe + Jam Operasional */
+        .container p:nth-child(2),
+        .container p:nth-child(3){
+            opacity:0;
+            animation:fadeUp 1s ease forwards;
+            animation-delay:0.5s;
+        }
+
+        /* SELAMAT DATANG */
+        .container p:nth-child(6){
+            opacity:0;
+            animation:fadeUp 1s ease forwards;
+            animation-delay:1s;
+        }
+
+        /* Deskripsi */
+        .container p:nth-child(7){
+            opacity:0;
+            animation:fadeUp 1s ease forwards;
+            animation-delay:1.5s;
+        }
+
+        /* Tombol */
+        .btn{
+            opacity:0;
+            animation:fadeUp 1s ease forwards;
+            animation-delay:2s;
+        }
+
+        #nama{
+            opacity:0;
+            animation:fadeUp 1s ease forwards;
+            animation-delay:1.6s;
+        }
+
+
+        @media screen and (max-width:768px){
+
+            .container{
+                width:90%;
+            }
+
+            .logo{
+                font-size:32px;
+            }
+
+            .judul{
+                font-size:35px;
+            }
+
+            input{
+                font-size:14px;
+            }
+
+            .btn{
+                width:100%;
+            }
+
+            .meja{
+                font-size:18px;
+            }
+        }
+
+        @media screen and (max-width:768px){
+
+            .container{
+                width:95%;
+            }
+
+            .logo{
+                font-size:28px;
+            }
+
+            .judul{
+                font-size:28px;
+            }
+
+            .btn{
+                font-size:16px;
+                padding:12px;
+            }
+        }
+
+        .menu-card{
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .menu-card:hover{
+            transform:translateY(-8px);
+
+            box-shadow:
+            0 10px 20px rgba(0,0,0,0.2);
+        }
 
