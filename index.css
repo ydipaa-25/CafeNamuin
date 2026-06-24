@@ -208,32 +208,7 @@ button a{
     animation-delay:1.8s;
 }
 
-@media screen and (max-width:768px){
 
-    .container{
-        width:90%;
-    }
-
-    .logo{
-        font-size:32px;
-    }
-
-    .judul{
-        font-size:35px;
-    }
-
-    input{
-        font-size:14px;
-    }
-
-    .btn{
-        width:100%;
-    }
-
-    .meja{
-        font-size:18px;
-    }
-}
 
 @media screen and (max-width:480px){
 
