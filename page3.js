@@ -6,7 +6,7 @@ let subtotal = 0;
 
 if (data.length > 0) {
 
-    data.forEach(item => {
+    data.forEach((item, index) => {
 
         const harga = Number(item.harga) || 0;
         const qty = Number(item.qty) || 0;
@@ -15,29 +15,27 @@ if (data.length > 0) {
         subtotal += totalItem;
 
         listKeranjang.innerHTML += `
-            <div class="item">
+        <div class="item">
 
-                <img src="${item.gambar}" class="menu-img">
+            <img src="${item.gambar}" class="menu-img">
 
-                <div class="menu-info">
-                    <h3>${item.nama}</h3>
-                    <p>
-                        Rp ${harga.toLocaleString("id-ID")}
-                        x ${qty}
-                    </p>
-                    <p>
-                        Rp ${totalItem.toLocaleString("id-ID")}
-                    </p>
-                </div>
-
+            <div class="menu-info">
+                <h3>${item.nama}</h3>
+                <p>Rp ${harga.toLocaleString("id-ID")} x ${qty}</p>
+                <p>Rp ${totalItem.toLocaleString("id-ID")}</p>
             </div>
+
+            <button class="hapus-btn"
+                onclick="hapusItem(${index})">
+                -
+            </button>
+
+        </div>
         `;
     });
 
     const tax = subtotal * 0.1;
     const total = subtotal + tax;
-
-    localStorage.setItem("totalBayar", total);
 
     document.getElementById("subtotal").textContent =
         "Rp " + subtotal.toLocaleString("id-ID");
@@ -53,7 +51,30 @@ if (data.length > 0) {
     listKeranjang.innerHTML =
         "<p>Keranjang masih kosong</p>";
 
-    document.getElementById("subtotal").textContent = "Rp 0";
-    document.getElementById("tax").textContent = "Rp 0";
-    document.getElementById("total").textContent = "Rp 0";
+}
+
+function hapusItem(index){
+
+    let keranjang =
+        JSON.parse(localStorage.getItem("keranjang")) || [];
+
+    if(keranjang[index]){
+
+        keranjang[index].qty--;
+
+        // Kalau qty sudah 0, hapus item
+        if(keranjang[index].qty <= 0){
+
+            keranjang.splice(index, 1);
+
+        }
+
+    }
+
+    localStorage.setItem(
+        "keranjang",
+        JSON.stringify(keranjang)
+    );
+
+    location.reload();
 }
