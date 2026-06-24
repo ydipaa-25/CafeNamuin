@@ -306,33 +306,6 @@ body{
     height:25px;
 }
 
-/* Tombol Back */
-button{
-    width:100%;
-    padding:12px;
-
-    background:#000;
-    border:none;
-    border-radius:10px;
-
-    margin-top:20px;
-}
-
-button a{
-    color:white;
-    text-decoration:none;
-    font-size:16px;
-    font-weight:bold;
-}
-
-.btn-back{
-    display:inline-block;
-    margin-top:20px;
-    color:#333;
-    text-decoration:none;
-    font-weight:bold;
-}
-
 .Menu-Footer{
     display:flex;
     justify-content:space-between;
